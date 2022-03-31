@@ -10,7 +10,12 @@
           v-for="rick in rickChildren"
           :key="rick.id"
         >
-          <Citizen :rickChild="rick" />
+          <Citizen
+            :title="rick.name"
+            :image="rick.image"
+            :description="rick.status"
+            :boldDescription="rick.species"
+          />
         </div>
         <div class="col-12 text-center">
           <button
@@ -25,6 +30,9 @@
           >
             Back Rick Back!
           </button> -->
+        </div>
+        <div class="col-12">
+          <p>Loaded {{ rickChildrenLength }} Rick's child</p>
         </div>
       </div>
       <div class="row" v-else>
@@ -58,7 +66,7 @@ export default {
     };
   },
   created: function () {
-    setTimeout(this.getRickElement, 2000, this.apiRickAddress);
+    setTimeout(this.getRickElement, 5000, this.apiRickAddress);
   },
   methods: {
     getRickElement(apiUrl) {
@@ -76,9 +84,16 @@ export default {
         });
     },
   },
+  computed: {
+    rickChildrenLength: function () {
+      return this.rickChildren.length;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-/*  */
+p {
+  color: rgb(0, 179, 255);
+}
 </style>

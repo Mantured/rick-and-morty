@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light bg-light pb-0">
+  <nav class="navbar navbar-light pb-0">
     <a class="navbar-brand pb-0" href="#">
       <img
         class=""
@@ -23,6 +23,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.navbar {
+  background-color: rgb(246, 246, 246);
+}
 img {
   width: 200px;
   height: 100%;
