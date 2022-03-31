@@ -1,7 +1,10 @@
 <template>
   <main>
     <div class="container-fluid p-5">
-      <div class="row" v-if="rickChildren">
+      <div
+        class="row justify-content-center align-items-center"
+        v-if="rickChildren"
+      >
         <div
           class="col-12 cols-xm-6 col-md-4 col-lg-2"
           v-for="rick in rickChildren"
@@ -9,7 +12,7 @@
         >
           <Citizen :rickChild="rick" />
         </div>
-        <div class="col-12">
+        <div class="col-12 text-center">
           <button
             class="btn-lg btn-warning"
             @click="getRickElement(apiRickNextAddress)"
@@ -55,7 +58,7 @@ export default {
     };
   },
   created: function () {
-    setTimeout(this.getRickElement, 500000, this.apiRickAddress);
+    setTimeout(this.getRickElement, 10000000, this.apiRickAddress);
   },
   methods: {
     getRickElement(apiUrl) {

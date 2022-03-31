@@ -20,4 +20,8 @@ export default {
 
 <style lang="scss">
 @import "./assets/scss/style.scss";
+#app {
+  position: relative;
+  background-color: rgb(3, 55, 55);
+}
 </style>

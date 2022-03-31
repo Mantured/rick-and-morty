@@ -1,6 +1,7 @@
 <template>
-  <div class="loader animate_animated animate_flip text-danger">
-    <h1>Loading</h1>
+  <div class="loader">
+    <img src="../assets/images/loader.webp" alt="images od Rick paceful" />
+    <h1 class="animate__animated animate__flip">A peaceful rick</h1>
   </div>
 </template>
 
@@ -14,7 +15,22 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
 div.loader {
+  img {
+    width: 100%;
+    height: 85vh;
+  }
+  h1 {
+    top: 50%;
+    right: 50%;
+    padding: 2rem;
+    position: absolute;
+    border-radius: 2rem;
+    filter: opacity(0.7);
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    animation-duration: 2s; /* don't forget to set a duration! */
+    /* transform: translate(-50% -50%); */
+  }
   //animation: animate__flip; /* referring directly to the animation's @keyframe declaration */
-  //animation-duration: 10s; /* don't forget to set a duration! */
 }
 </style>
