@@ -28,7 +28,7 @@ div.loader {
     filter: opacity(0.7);
     text-transform: uppercase;
     background-color: whitesmoke;
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation-duration: 5s; /* don't forget to set a duration! */
     /* transform: translate(-50% -50%); */
   }
   //animation: animate__flip; /* referring directly to the animation's @keyframe declaration */

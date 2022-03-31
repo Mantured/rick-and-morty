@@ -58,7 +58,7 @@ export default {
     };
   },
   created: function () {
-    setTimeout(this.getRickElement, 10000000, this.apiRickAddress);
+    setTimeout(this.getRickElement, 2000, this.apiRickAddress);
   },
   methods: {
     getRickElement(apiUrl) {
