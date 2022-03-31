@@ -19,17 +19,17 @@
         </div>
         <div class="col-12 text-center">
           <button
+            class="btn-lg btn-warning me-2"
+            @click="getRickElement(apiRickBackAddress)"
+          >
+            Back Morty Back!
+          </button>
+          <button
             class="btn-lg btn-warning"
             @click="getRickElement(apiRickNextAddress)"
           >
-            Next
+            Next Adventure Morty!
           </button>
-          <!-- <button
-            class="btn-lg btn-warning"
-            @click="getRickElement(apiRickBackAddress)"
-          >
-            Back Rick Back!
-          </button> -->
         </div>
         <div class="col-12">
           <p>Loaded {{ rickChildrenLength }} Rick's child</p>
@@ -61,7 +61,7 @@ export default {
     return {
       apiRickAddress: "http://rickandmortyapi.com/api/character",
       apiRickNextAddress: "",
-      /* apiRickBackAddress: null, */
+      apiRickBackAddress: null,
       rickChildren: null,
     };
   },
@@ -75,8 +75,8 @@ export default {
         .then((result) => {
           this.rickChildren = result.data.results;
           this.apiRickNextAddress = result.data.info.next;
-          //this.apiRickBackAddress = result.data.info.prev;
-          //console.log(result.data.info.prev);
+          this.apiRickBackAddress = result.data.info.prev;
+          console.log(result.data.info.prev);
           console.log(this.rickChildren);
         })
         .catch((error) => {
